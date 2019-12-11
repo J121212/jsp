@@ -1,0 +1,53 @@
+<!DOCTYPE validators PUBLIC
+"-//Apache Struts//XWork Validator 1.0.3//EN"
+"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="name">
+		
+		<field-validator type="requiredstring">
+			<message key="error.name">not null</message>
+		</field-validator>
+		
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">50</param>
+			<param name="trim">true</param>
+			<message key="error.name1">bad input</message>
+		</field-validator>
+	</field>
+	<field name="birthday">
+		<field-validator type="required">
+			<message key="error.birthday1">not null</message>
+		</field-validator>
+		<field-validator type="date">
+			<param name="min">1900-01-01</param>
+			<param name="max">2020-12-31</param>
+			<message key="error.birthday2">bad input</message>
+		</field-validator>
+	</field>
+	
+	<field name="height">
+		<field-validator type="required">
+			<message key="error.height1">not null</message>
+		</field-validator>
+		<field-validator type="double">
+			<param name="minExclusive">100</param>
+			<param name="maxExclusive">250 </param>
+			<message key="error.height2">bad input</message>
+		</field-validator>
+	</field>
+	<field name="sex">
+		<field-validator type="requiredstring">
+			<message key="error.sex">not null</message>
+		</field-validator>
+		
+		
+	</field>
+	<field name="hobby">
+		<field-validator type="requiredstring">
+			<message key="error.hobby">not null</message>
+		</field-validator>
+		
+		
+	</field>
+</validators>
